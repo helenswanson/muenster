@@ -1,8 +1,11 @@
 <ul>
   <% @jobs.each do |job| %>
-    <li><%= job.title %>
-    - <%= job.company.name %>,
-    <%= job. company.location %>
+    <li>
+      <%= link_to(job_path(job)) do %>
+        <%= job.title %> -
+        <%= job.company.name %>,
+        <%= job.company.location %>
+      <% end %>
     </li>
   <% end %>
 </ul>

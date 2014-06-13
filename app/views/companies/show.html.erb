@@ -1,0 +1,11 @@
+<ul>
+
+  <%= @company.description %>
+  <% @company.jobs.each do |job| %>
+    <li>
+      <%= job.title %>
+    </li>
+  <% end %>
+
+</ul>
+
